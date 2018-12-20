@@ -3,8 +3,22 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueResource from 'vue-resource'
+import axios from './ajax'
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
+Vue.use(VueResource)
+axios.interceptors.request.use(function(request){
+  console.log("axios request init")
+  return request
+})
+axios.interceptors.response.use(function(response){
+  console.log("axios request resp")
+  return response
+})
+// 超时设置
+
 
 /* eslint-disable no-new */
 // new Vue({
@@ -18,7 +32,25 @@ new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!'
-  }
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+    console.log('a is: ' + this.message)
+    this.$axios.get('static/china.json').then((response) => {
+      console.log(response.data); this.data = response.data
+    }, (response) => { // error
+      console.log(response); console.log('axios err')
+    })
+  
+
+    // this.$http.get('static/china.json').then(res => {
+    //   console.log(res.body)
+    //   console.log("json数据为:" + res.body)//此处的res对象包含了json的文件信息和数据，我们需要的json数据存在于body属性中
+    // })
+  },
+  mounted:function(){
+  
+},
 })
 
 var app2 = new Vue({
