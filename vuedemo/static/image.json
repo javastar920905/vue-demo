@@ -1,0 +1,35 @@
+{
+    "result":1,
+    "data":[
+            {
+                "memberId":"1",
+                "memberAvatar":"/wechat.jpg",
+                "memberNickname":"欢乐看看",
+                "favoriteMemberCreatetime":"2018-12-20 17:32:00",
+                "sharedCreatetime":"2018-12-20 17:35:00",
+                "photos": [
+                    "/wechat.jpg",
+                    "/wechat.jpg"  
+                ],
+                "sharedId":"1",
+                "sharedContent":"今天天气真好",
+                "memberIsThumbs":true,
+                "sharedView":"100"
+            },    
+            {
+            "memberId":"2",
+            "memberAvatar":"/wechat.jpg",
+            "memberNickname":"我是一只羊",
+            "favoriteMemberCreatetime":"2018-12-20 17:32:00",
+            "sharedCreatetime":"2018-12-20 17:35:00",
+            "photos": [
+                "/wechat.jpg",
+                "/wechat.jpg"  
+            ],
+            "sharedId":"2",
+            "sharedContent":"this is test content  thanks ",
+            "memberIsThumbs":true,
+            "sharedView":"10000"
+        }
+    ]
+}
