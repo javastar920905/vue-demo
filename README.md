@@ -3,9 +3,20 @@
 - [我的有道云笔记总结](http://note.youdao.com/noteshare?id=a37532307f403cb7a7bde5b015d6b2a9)
 
 ## demo1
+    学习了vue-cli 的生成
     切换到国内镜像  npm install -g cnpm --registry=https://registry.npm.taobao.org
     安装vue-cli脚手架  cnpm install -g vue-cli
     构建项目 vue init webpack demo1
     cd demo1 && cnpm install
     运行项目 npm run dev
+
+## 分支介绍 photodemo 
+- vuedemo 模块是一个vue照片分享功能示例
+    学习笔记记录在有道云笔记上面
+    学习了项目结构,依赖检查,了解到vue +  vue-router +  vuex （传说中的vue 全家桶 ）
+- vue-admin-step-by-step 是vue学习示例
+    学习笔记记录在有道云笔记上面
+    学习了vue-router(控制页面跳转)  element-ui 的入门使用(制作单个页面)
+    初次跳的坑: vue-router 全局守卫, element-ui 走马灯中使用vue的render函数
+
 
