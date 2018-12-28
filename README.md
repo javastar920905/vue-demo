@@ -11,6 +11,8 @@
     运行项目 npm run dev
 
 ## 分支介绍 photodemo 
+- vue-cli-demo 
+    vue-cli 入门示例
 - vuedemo 模块是一个vue照片分享功能示例
     学习笔记记录在有道云笔记上面
     学习了项目结构,依赖检查,了解到vue +  vue-router +  vuex （传说中的vue 全家桶 ）
@@ -18,5 +20,10 @@
     学习笔记记录在有道云笔记上面
     学习了vue-router(控制页面跳转)  element-ui 的入门使用(制作单个页面)
     初次跳的坑: vue-router 全局守卫, element-ui 走马灯中使用vue的render函数
+- vue-todos-no-mockjs
+    vue-todo 项目的页面布局(不包含axios 和mock)
+- vue-todo-with-mockjs-vuex
+    vue-todo 后续含axios 和mock,vuex 不过并不是很清晰,需要重新学习
+
 
 
