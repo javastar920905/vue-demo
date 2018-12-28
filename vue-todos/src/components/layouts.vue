@@ -1,24 +1,25 @@
 <template>
     <section class="container" > <!--最外层容器-->
         <section class="menu"> <!--左边的容器-->
-            <todo></todo>
+           <menus></menus>
         </section>
         <section class="content-container"><!--右边的容器-->
+            <todos></todos>
         </section>
   </section>
 </template>
 <script>
-//导入刚才创建的 menus组件
 import menus from './menus'
-import todo  from './todos'
-
+import todos from './todos'
 export default {
-    components:{// * 注册menus组件，让其可以在template调用
+    components:{
         menus,
-        todo
+        todos
     }
+    
 }
 </script>
+
 <style lang="less">
 @import '../common/style/layouts.less';
 </style>
