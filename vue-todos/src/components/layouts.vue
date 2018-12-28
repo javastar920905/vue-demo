@@ -15,6 +15,11 @@ export default {
     components:{
         menus,
         todos
+    },
+    computed: {
+        menuOpen() {
+        return this.$store.state.menuOpen;
+        }
     }
     
 }
