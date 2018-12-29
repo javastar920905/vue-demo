@@ -24,6 +24,9 @@
     vue-todo 项目的页面布局(不包含axios 和mock)
 - vue-todo-with-mockjs-vuex
     vue-todo 后续含axios 和mock,vuex 不过并不是很清晰,需要重新学习
+- vue-socket 
+    vue 聊天室实现示例,虽然看不懂代码,但是运行起来还是蛮好玩的,就当备份了
+
 
 
 
