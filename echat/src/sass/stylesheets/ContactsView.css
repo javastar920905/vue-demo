@@ -1,0 +1,163 @@
+/* line 1, ../sass/ContactsView.scss */
+.ContactsView {
+  position: relative;
+  float: right;
+  background: url(../../images/bg.png) no-repeat center top;
+  width: 608px;
+  height: 638px;
+}
+/* line 9, ../sass/ContactsView.scss */
+.ContactsView .infoDetail {
+  width: 424px;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+/* line 14, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .userImg {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* line 21, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .userImg img {
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* line 32, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .userName {
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #404040;
+  text-align: center;
+  margin-top: 15px;
+}
+/* line 39, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .userAbout {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: gray;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+/* line 47, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 110px;
+  border-top: 1px solid #e1e2e6;
+}
+/* line 54, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame h3 {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #404040;
+  margin-bottom: 20px;
+}
+/* line 62, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame ul {
+  width: 100%;
+  height: 75px;
+}
+/* line 65, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame ul li {
+  float: left;
+  width: 54px;
+  height: 75px;
+  margin-right: 20px;
+}
+/* line 70, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame ul li:last-child {
+  margin-right: 0;
+}
+/* line 73, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame ul li img {
+  width: 54px;
+  height: 54px;
+}
+/* line 77, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .inGame ul li p {
+  width: 54px;
+  height: 21px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #404040;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 91, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box {
+  width: 100%;
+  height: 42px;
+  text-align: center;
+}
+/* line 95, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box a {
+  display: inline-block;
+  width: 126px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  text-decoration: none;
+}
+/* line 105, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .default {
+  color: #595959;
+  background-color: rgba(245, 246, 247, 0);
+  border: 1px solid gainsboro;
+  margin-left: 10px;
+}
+/* line 110, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .default:hover {
+  border-color: gainsboro;
+  background-color: #f5f6f7;
+}
+/* line 114, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .default:active {
+  border-color: gainsboro;
+  background-color: #edeff0;
+}
+/* line 119, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .isCurrent {
+  color: #fff;
+  background-image: -moz-linear-gradient(0deg, #0095ff 1%, #30f0f0 100%);
+  background-image: -webkit-linear-gradient(0deg, #0095ff 1%, #30f0f0 100%);
+  background-image: linear-gradient(0deg, #0095ff 1%, #30f0f0 100%);
+  background-image: -ms-linear-gradient(0deg, #0095ff 1%, #30f0f0 100%);
+}
+/* line 125, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .isCurrent:hover {
+  background-image: -moz-linear-gradient(0deg, #038bfe 1%, #08dde5 100%);
+  background-image: -webkit-linear-gradient(0deg, #038bfe 1%, #08dde5 100%);
+  background-image: linear-gradient(0deg, #038bfe 1%, #08dde5 100%);
+  background-image: -ms-linear-gradient(0deg, #038bfe 1%, #08dde5 100%);
+}
+/* line 131, ../sass/ContactsView.scss */
+.ContactsView .infoDetail .box .isCurrent:active {
+  background-image: -moz-linear-gradient(0deg, #0677eb 1%, #01d9e7 100%);
+  background-image: -webkit-linear-gradient(0deg, #0677eb 1%, #01d9e7 100%);
+  background-image: linear-gradient(0deg, #0677eb 1%, #01d9e7 100%);
+  background-image: -ms-linear-gradient(0deg, #0677eb 1%, #01d9e7 100%);
+}
+
+/* line 141, ../sass/ContactsView.scss */
+.defaultState {
+  background: #F7F9FA url(/static/img/defaultState.0253b97.png) no-repeat center right;
+}

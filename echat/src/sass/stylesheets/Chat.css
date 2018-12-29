@@ -1,0 +1,230 @@
+/* line 1, ../sass/Chat.scss */
+.Chat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 5, ../sass/Chat.scss */
+.Chat .ChatBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  min-height: 638px;
+  border-right: 1px solid #e1e2e6;
+  background: #f0f2f5;
+  user-select: none;
+  z-index: 2;
+}
+/* line 16, ../sass/Chat.scss */
+.Chat .ChatBox .ChatSerch {
+  padding: 19px 11px 11px 12px;
+}
+/* line 18, ../sass/Chat.scss */
+.Chat .ChatBox .ChatSerch input {
+  display: none;
+  width: 197px;
+  height: 40px;
+  padding: 0 10px 0 30px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  border: 0;
+  outline: none;
+  background: #e5e7e9 url(../../images/icon.png) no-repeat 10px center;
+}
+/* line 32, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-user-select: none;
+}
+/* line 38, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+/* line 42, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+/* line 48, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList:hover::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 54, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList ul {
+  width: 100%;
+  height: auto;
+  min-height: 568px;
+}
+/* line 60, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList .current .userMessageNum {
+  display: none;
+  opacity: 0;
+  -webkit-opacity: 0;
+}
+/* line 66, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li {
+  height: 42px;
+  padding: 11px 12px;
+  cursor: pointer;
+}
+/* line 70, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li:hover, .Chat .ChatBox .ChatList li.current {
+  background: #dee2e7;
+}
+/* line 73, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li:active {
+  background: #d0d5d8;
+}
+/* line 76, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd {
+  position: relative;
+  float: left;
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+/* line 83, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd:hover .online_game em {
+  display: inline-block;
+}
+/* line 87, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .userHdImg {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #999;
+}
+/* line 94, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .userHdImg img {
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* line 104, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .onlineState {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  height: 9px;
+}
+/* line 110, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .onlineState em {
+  display: none;
+  position: absolute;
+  left: 15px;
+  line-height: 28px;
+  text-align: center;
+  min-width: 98px;
+  padding: 0 5px 0 20px;
+  height: 28px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: #595959;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(90deg, #e4e5f0 0%, white 100%);
+  background-image: -webkit-linear-gradient(90deg, #e4e5f0 0%, white 100%);
+  background-image: linear-gradient(90deg, #e4e5f0 0%, white 100%);
+  background-image: -ms-linear-gradient(90deg, #e4e5f0 0%, white 100%);
+  box-shadow: 1.5px 2.598px 6px 0px rgba(0, 0, 0, 0.33);
+  white-space: nowrap;
+}
+/* line 130, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .onlineState em i {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+/* line 140, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .online_game {
+  background: url(../../images/icon_game.png) no-repeat center;
+}
+/* line 142, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userHd .online_game i {
+  background: url(../../images/game.png) no-repeat center;
+}
+/* line 147, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo {
+  float: left;
+  width: 179px;
+  height: 100%;
+}
+/* line 151, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo div {
+  width: 100%;
+  height: 21px;
+  line-height: 21px;
+}
+/* line 155, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo div:last-child {
+  margin-top: 3px;
+}
+/* line 159, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo .name {
+  width: 140px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #404040;
+}
+/* line 165, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo .userMessageNum {
+  float: right;
+  display: inline-block;
+  font-size: 11px;
+  min-width: 10px;
+  height: 20px;
+  padding: 0 5px;
+  text-align: center;
+  font-family: "Arial";
+  color: white !important;
+  border-radius: 20px;
+  background-color: #f74c31;
+}
+/* line 178, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo .oneMessage {
+  width: 140px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: gray;
+}
+/* line 184, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo .userInfoTime {
+  font-size: 12px;
+  font-family: "Arial";
+  color: #b3b3b3;
+}
+/* line 189, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList li .userInfo .textHidden {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 198, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList .offline img {
+  -webkit-filter: grayscale(95%);
+}
+/* line 201, ../sass/Chat.scss */
+.Chat .ChatBox .ChatList .offline div, .Chat .ChatBox .ChatList .offline span {
+  color: #b3b3b3 !important;
+}
