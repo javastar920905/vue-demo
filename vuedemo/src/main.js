@@ -20,7 +20,7 @@ new Vue({
       `<div>
           <span>text1:</span> {{text1}}
           <span>text2:</span> {{text3}}
-      <div>`,
+      </div>`,
   data: {
       text1: 'text1',
       text2: 'text2',
