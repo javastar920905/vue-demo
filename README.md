@@ -10,7 +10,8 @@
     cd demo1 && cnpm install
     运行项目 npm run dev
 
-## 分支介绍 photodemo 
+## 分支和模块介绍 photodemo 
+### 分支
 - vue-cli-demo 
     vue-cli 入门示例
 - vuedemo 模块是一个vue照片分享功能示例
@@ -25,7 +26,10 @@
 - vue-todo-with-mockjs-vuex
     vue-todo 后续含axios 和mock,vuex 不过并不是很清晰,需要重新学习
 - vue-socket 
-    vue 聊天室实现示例,虽然看不懂代码,但是运行起来还是蛮好玩的,就当备份了
+    vue 聊天室实现示例,虽然看不懂代码,但是运-行起来还是蛮好玩的,就当备份了
+### 模块
+- vue-spring-websocket-demo 模块
+    vue 对接spring websocket 后台功能实现
 
 
 
