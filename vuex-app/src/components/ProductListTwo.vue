@@ -3,7 +3,7 @@
     <h2>product list two</h2>
     
      <ul>
-      <li v-for="p in products" v-key="p.name">
+      <li v-for="p in products" :key="p.name">
         <span class="name">{{p.name}}</span>
          <span class="price">{{p.price}}</span>
       </li>
@@ -15,10 +15,14 @@
 export default {
   name: 'product-list-two',
   // 接收属性传值
-  props:["products"],
+ 
   data(){
     return {
       
+    }
+  },computed:{
+    products(){
+      return this.$store.state.products
     }
   }
 }
