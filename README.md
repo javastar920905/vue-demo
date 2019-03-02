@@ -30,6 +30,9 @@
 ### 模块
 - vue-spring-websocket-demo 模块
     vue 对接spring websocket 后台功能实现
+- pizza-app vue-router 学习
+- blog-app vue-router vue-resource学习
+- vuex-app vuex 学习state getters actions
 
 
 
