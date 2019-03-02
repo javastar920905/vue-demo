@@ -27,8 +27,11 @@
 ## 编写header.vue 样式
 
   https://v4.bootcss.com/->快速入门->components->navbar->copy 所需要样式的class
+
   配置路由跳转:src/router/index.js
+
   使用router-link进行页面跳转而不是 a标签
+  
   <router-link to="/login" class="nav-link">登录</router-link>
 
 ## 预览样式

@@ -1,7 +1,33 @@
 <template>
   <div id="app">
-    <appHeader></appHeader>
-    <router-view/>
+    <div class="container">
+      <appHeader></appHeader>
+    </div>
+    <div class="container">
+      <router-view/>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <router-view name="orderGuid">
+
+          </router-view>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <router-view name="delivery">
+
+          </router-view>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <router-view name="history">
+
+          </router-view>
+        </div>
+      </div>
+    </div>
+    
+    
   </div>
 </template>
 
