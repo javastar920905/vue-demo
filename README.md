@@ -33,6 +33,7 @@
 - pizza-app vue-router 学习
 - blog-app vue-router vue-resource学习
 - vuex-app vuex 学习state getters actions
+- axios-test axios 请求示例
 
 
 
