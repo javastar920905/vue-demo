@@ -34,6 +34,7 @@
 - blog-app vue-router vue-resource学习
 - vuex-app vuex 学习state getters actions
 - axios-test axios 请求示例
+- nuxtdemo 使用nuxt 作为开发框架 实现vue 项目seo
 
 
 
