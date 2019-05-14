@@ -14,7 +14,7 @@ COPY ./** /usr/src/node/project/
 WORKDIR /usr/src/node/project
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 # 暴露container的端口
-EXPOSE 3000
+EXPOSE 8000
 # 运行命令
 ENTRYPOINT ["sh", "nuxt-start.sh"]
 #CMD ["docsify", "serve","docs"]
