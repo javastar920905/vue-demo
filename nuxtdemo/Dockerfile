@@ -12,6 +12,7 @@ RUN mkdir -p /usr/src/node/nuxtdemo
 WORKDIR /usr/src/node
 # 复制所有文件到 工作目录。ADD 命令自动解压
 ADD ./nuxtdemo.zip /usr/src/node/nuxtdemo/
+RUN unzip -o nuxtdemo.zip
 # 编译运行node项目，使用npm安装程序的所有依赖,利用taobao的npm安装
 WORKDIR /usr/src/node/nuxtdemo
 # 安装依赖和项目构建  run 多条命令 
