@@ -43,8 +43,8 @@ $ npm run generate
         * git pull 更新代码 
         * 构建镜像 docker build -t  docker-registry:5000/nuxtdemo .
         * 镜像调试 
-            * docker run -it --name npm-test -p 8001:8000 docker-registry:5000/nuxtdemo tail -f /etc/hosts
             * docker run -it --net="host" --name npm-test  docker-registry:5000/nuxtdemo tail -f /etc/hosts
+            * docker run -it --name npm-test -p 8001:8000 docker-registry:5000/nuxtdemo tail -f /etc/hosts
         * 移除调试容器 docker rm -f npm-test 
 * 编写 docker 容器启动脚本 docker-nuxt-restart.sh
     * 修改服务名称 端口 镜像名称
