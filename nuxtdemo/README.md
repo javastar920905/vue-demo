@@ -16,6 +16,7 @@
 ``` bash
 # 安装依赖
 $ cnpm install
+cnpm install core-js@2
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -41,7 +42,9 @@ $ npm run generate
     * 手动build 镜像(node 镜像,cnpm cp项目代码到docker容器)
         * git pull 更新代码 
         * 构建镜像 docker build -t  docker-registry:5000/nuxtdemo .
-        * 镜像调试 docker run -it --net="host" --name npm-test -p 8001:8000 docker-registry:5000/nuxtdemo tail -f /etc/hosts
+        * 镜像调试 
+            * docker run -it --name npm-test -p 8001:8000 docker-registry:5000/nuxtdemo tail -f /etc/hosts
+            * docker run -it --net="host" --name npm-test  docker-registry:5000/nuxtdemo tail -f /etc/hosts
         * 移除调试容器 docker rm -f npm-test 
 * 编写 docker 容器启动脚本 docker-nuxt-restart.sh
     * 修改服务名称 端口 镜像名称
