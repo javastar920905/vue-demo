@@ -1,1 +1,1 @@
-cnpm install &&cnpm install core-js@2&&npm run build&&npm start
+npm run build&&npm start
