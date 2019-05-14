@@ -14,8 +14,8 @@ WORKDIR /usr/src/node
 ADD ./** /usr/src/node/nuxtdemo/
 # 编译运行node项目，使用npm安装程序的所有依赖,利用taobao的npm安装
 WORKDIR /usr/src/node/nuxtdemo
-# 安装依赖和项目构建
-RUN cnpm install &&cnpm install core-js@2&&npm run build
+# 安装依赖和项目构建  run 多条命令
+RUN /bin/sh -c 'cnpm install &&cnpm install core-js@2&&npm run build'
 # 暴露container的端口
 EXPOSE 8000
 # 运行命令
