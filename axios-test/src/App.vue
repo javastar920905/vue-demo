@@ -36,12 +36,12 @@ export default {
     // nginx 配置允许跨域'http://localhost/tax-declare/xgm/declare/taxDeclareList?busiType=unDeclare&skssqq=2018-07-01&skssqz=2018-09-30&pageNum=1&pageSize=10'
     
     let urlprefix='http://localhost/tax-declare/xgm/declare';
+    // let urlprefix='http://dev.7easytax.com/tax-declare/xgm/declare';
 
     let that=this;
+     console.log("发送get 请求")
     this.$axios.get(urlprefix+'/taxDeclareList?busiType=unDeclare&skssqq=2018-07-01&skssqz=2018-09-30&pageNum=1&pageSize=10')
     .then(function (response) {
-      
-      console.log("发送get 请求")
      // console.log(response.data.data);
       //console.log(response.data.data.declares);
       let declares=response.data.data.declares;
@@ -51,16 +51,32 @@ export default {
       let declare=that.declares[0];
       that.socialCreditCode=declare.socialCreditCode;
       that.goodsZzsXgmModelVO=declare.goodsZzsXgmModelVO;
+      that.goodsZzsXgmModelVO.socialCreditCode=that.socialCreditCode;
       that.serviceZzsXgmModelVO=declare.serviceZzsXgmModelVO;
+      that.serviceZzsXgmModelVO.socialCreditCode=that.socialCreditCode;
       //console.log(that.goodsZzsXgmModelVO);
       console.log("发送get 请求完成")
 
-    let ZzsXgmModelVO=[];
-    ZzsXgmModelVO.push(declare.goodsZzsXgmModelVO);
-    ZzsXgmModelVO.push(declare.serviceZzsXgmModelVO);
-      
+        let updateZbUrl=urlprefix+'/declare/xgm/updateXgmZbOnListPage';//修改主表记录url
+        let zeroDeclareUrl=urlprefix+'/lxlsb/xgm/yjlsb';//零申报url
 
-        that.$axios.post(urlprefix+'/declare/xgm/updateXgmZbOnListPage', ZzsXgmModelVO)
+        //构建主表数据
+        let ZzsXgmModelVO=[];
+        ZzsXgmModelVO.push(declare.goodsZzsXgmModelVO);
+        ZzsXgmModelVO.push(declare.serviceZzsXgmModelVO);
+         console.log("构建主表数据")
+        console.log(ZzsXgmModelVO)
+        
+        //构建零申报数据
+        let zeroDeclareVO=[];
+        declare.yjlsbVo.socialCreditCode=that.socialCreditCode;
+        zeroDeclareVO.push(declare.yjlsbVo);
+        console.log("构建零申报数据")
+        console.log(declare.yjlsbVo)
+
+        //发送post请求
+        console.log("发送post请求")
+        that.$axios.post(zeroDeclareUrl, zeroDeclareVO)
           .then(function (response) {
             console.log(response);
           })
