@@ -7,7 +7,7 @@ serviceport=8000
 
 docker rm -f ${service}
 # docker images | grep none | awk '{print $3}' | xargs docker rmi -f
-# -p linuxport:docker port
-docker run -d -m 1G --name  ${service}  -p ${serviceport}:8000 -t ${image}
+# -p linuxport:docker port  nouseful when --net="host"
+docker run -d -m 1G --name  ${service} --net="host" -p ${serviceport}:8000 -t ${image}
 # docker logs -f --tail 1000  ${service}
 
