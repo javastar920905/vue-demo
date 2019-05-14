@@ -1,60 +1,65 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxtdemo
-      </h1>
-      <h2 class="subtitle">
-        资讯列表演示demo
-      </h2>
-      <div class="links">
-        <!-- <nuxt-link to="/article/list">资讯列表页</nuxt-link>
-        <nuxt-link to="/article/detail">资讯详情页</nuxt-link> -->
-        <ul id="example-1">
-         <template v-if="pageInfo">
-            <li v-for="article in pageInfo.list" v-bind:key="article.articleId">
-               <nuxt-link  :to="{name:'article-id',params:{id:article.articleId}}">{{article.title}}</nuxt-link> 
-            </li>
-         </template>
-        </ul>
+  <div>
+    <Header />
+    <section class="container">
+      <div>
+        <logo />
+        <h1 class="title">
+          nuxtdemo
+        </h1>
+        <h2 class="subtitle">
+          资讯列表演示demo
+        </h2>
+        <div class="links">
+          <!-- <nuxt-link to="/article/list">资讯列表页</nuxt-link>
+          <nuxt-link to="/article/detail">资讯详情页</nuxt-link> -->
+          <ul id="example-1">
+          <template v-if="pageInfo">
+              <li v-for="article in pageInfo.list" v-bind:key="article.articleId">
+                <nuxt-link  :to="{name:'article-id',params:{id:article.articleId}}">{{article.title}}</nuxt-link> 
+              </li>
+          </template>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import axios from 'axios'
+import Logo from "~/components/Logo.vue";
+import Header from "~/components/Header.vue";
+import axios from "axios";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Header
   },
-  data () {
-        return {
-          pageInfo: {
-            pageSize: 10,
-            pageNum: 1,
-            list:  [ ],
-          }
-        }
+  data() {
+    return {
+      pageInfo: {
+        pageSize: 10,
+        pageNum: 1,
+        list: []
+      }
+    };
   },
-  fetch ({ app }) {
-   //console.log(app.$axios)
+  fetch({ app }) {
+    //console.log(app.$axios)
   },
-  async  asyncData ({ app }) {
-    let listUrl= 'http://dev.7easytax.com/article/list/?articleType=35&taxClassificationId=&pageSize=10&pageNum=1'
+  async asyncData({ app }) {
+    let listUrl =
+      "http://dev.7easytax.com/article/list/?articleType=35&taxClassificationId=&pageSize=10&pageNum=1";
     let { data } = await app.$axios.get(listUrl);
     return {
-        pageInfo:data.data //asyncData 的return 会更新data 中数据
-    }
-    
+      pageInfo: data.data //asyncData 的return 会更新data 中数据
+    };
   },
-  created () {
-    console.log(this.$axios)
+  created() {
+    console.log(this.$axios);
   }
-}
+};
 </script>
 
 <style>
@@ -68,8 +73,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
