@@ -51,9 +51,7 @@ $ npm run generate
 * 编写 docker 容器启动脚本 docker-nuxt-restart.sh
     * 修改服务名称 端口 镜像名称
     * 启动容器 
-        * git checkout .&& git pull
-        * chmod +x docker-nuxt-restart.sh 
-        * sh docker-nuxt-restart.sh
+        * chmod +x docker-nuxt-restart.sh && sh docker-nuxt-restart.sh
 * 解决访问异常问题
     * Docker: curl 主机:端口  connection reset by peer
     * nuxt.config.js 配置server :{host: '0.0.0.0'}
