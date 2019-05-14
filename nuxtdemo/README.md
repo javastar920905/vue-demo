@@ -34,6 +34,7 @@ $ npm run generate
 > 安装缺失依赖 cnpm install core-js@2
 
 ## 使用docker 进行发布
+* 把项目打包成zip包 排除 node_modules和.nuxt目录
 * mkdir nuxtdemo
     * cd nuxtdemo/
     * 服务器端使用git clone 代码库
