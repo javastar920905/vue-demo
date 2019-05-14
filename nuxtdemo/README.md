@@ -39,7 +39,11 @@ $ npm run generate
         * git clone https://github.com/javastar920905/vue-demo.git 
     * 进入到nuxtdemo 目录 cd vue-demo/nuxtdemo 
     * 手动build 镜像(node 镜像,cnpm cp项目代码到docker容器)
-        * docker build -t  docker-registry:5000/nuxtdemo .
+        * git pull 更新代码 
+        * 构建镜像 docker build -t  docker-registry:5000/nuxtdemo .
+        * 镜像调试 docker run -it --name npm-test docker-registry:5000/nuxtdemo tail -f /etc/hosts
+        * 移除调试容器 docker rm -f npm-test 
 * 编写 docker 容器启动脚本 docker-nuxt-restart.sh
     * 修改服务名称 端口 镜像名称
+    * 启动容器 ./docker-nuxt-restart.sh
 
