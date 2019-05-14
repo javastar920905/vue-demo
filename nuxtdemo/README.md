@@ -45,5 +45,6 @@ $ npm run generate
         * 移除调试容器 docker rm -f npm-test 
 * 编写 docker 容器启动脚本 docker-nuxt-restart.sh
     * 修改服务名称 端口 镜像名称
+    * sudo chmod +x docker-nuxt-restart.sh
     * 启动容器 ./docker-nuxt-restart.sh
 

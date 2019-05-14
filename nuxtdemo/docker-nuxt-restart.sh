@@ -4,7 +4,7 @@ docker build -t  docker-registry:5000/nuxtdemo .
 service=nuxtdemo
 image=docker-registry:5000/${service}
 
-serviceport=3001
+serviceport=3003
 
 docker rm -f ${service}
 # docker images | grep none | awk '{print $3}' | xargs docker rmi -f
