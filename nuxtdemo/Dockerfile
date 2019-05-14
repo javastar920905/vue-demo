@@ -11,7 +11,7 @@ RUN mkdir -p /usr/src/node/nuxtdemo
 # 设置工作目录
 WORKDIR /usr/src/node
 # 复制所有文件到 工作目录。
-COPY ../nuxtdemo/ /usr/src/node/nuxtdemo/
+ADD ./** /usr/src/node/nuxtdemo/
 # 编译运行node项目，使用npm安装程序的所有依赖,利用taobao的npm安装
 WORKDIR /usr/src/node/nuxtdemo
 # 安装依赖和项目构建
