@@ -1,12 +1,9 @@
 <template>
-  <div>
-    <Header />
-    <section class="container">
+  <div class="container">
+    <Top />
+
+    <section >
       <div>
-        <logo />
-        <h1 class="title">
-          nuxtdemo
-        </h1>
         <h2 class="subtitle">
           资讯列表演示demo
         </h2>
@@ -23,18 +20,25 @@
         </div>
       </div>
     </section>
+
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
-import Header from "~/components/Header.vue";
+// import Header from "~/components/Header.vue";
+import Top from "~/components/Top.vue";
+import Footer from "~/components/Footer.vue";
 import axios from "axios";
+
 
 export default {
   components: {
     Logo,
-    Header
+    Top,
+    Footer
+
   },
   data() {
     return {

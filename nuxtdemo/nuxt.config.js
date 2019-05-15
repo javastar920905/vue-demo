@@ -37,6 +37,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '@/plugins/element-ui', ssr: false},
+    { src: '@/plugins/main'}
   ],
 
   /*

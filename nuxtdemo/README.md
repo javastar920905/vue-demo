@@ -1,7 +1,7 @@
 # nuxtdemo
 
 ## 参考文档
-* [nuxt seo 总结](http://note.youdao.com/noteshare?id=aff5329b589939c258caf04b7c19b9b3) 
+* [nuxt seo 总结 有道云笔记](http://note.youdao.com/noteshare?id=aff5329b589939c258caf04b7c19b9b3) 
 * [vue-Nuxt.js 文档](https://zh.nuxtjs.org/guide/directory-structure/)
 
 * NUXT为什么？  vue开发的SPA（单页应用）不利于搜索引擎的SEO优化。
@@ -18,6 +18,11 @@
 $ cnpm install
 cnpm install core-js@2
 
+Footer 组件和Top组件需要额外依赖
+    cnpm install stylus
+    cnpm install --save-dev stylus-loader  
+    cnpm i element-ui -S 安装饿了么ui
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 
@@ -32,6 +37,10 @@ $ npm run generate
 ## 解决启动报错问题
 * npm run build 报错  Can't resolve 'core-js/modules/es6.regexp.xxx
 > 安装缺失依赖 cnpm install core-js@2
+* Module not found: Error: Can't resolve 'stylus-loader' 
+> cnpm install --save-dev stylus-loader
+* nuxt HTMLElement is not define nuxt.js
+> [解决参考文档](https://blog.csdn.net/qq_35023116/article/details/89575997)
 
 ## 使用docker 进行发布
 * 把项目打包成zip包 排除 node_modules和.nuxt目录
@@ -58,3 +67,22 @@ $ npm run generate
     * 解决 docker run --net="host" 当指定了主机网络模式以后,-p 就没有用了,直接使用EXPOSE 3000的端口
     
 
+## 如何和已有系统整合
+    * [官方github issuse - How to add nuxt to an already existing project?](https://github.com/nuxt/nuxt.js/issues/2596)
+        * 存在一个已有vue项目如何改造成nuxt?
+            * 新建nuxt项目,copy 已有代码到nuxt
+            * 组件内使用到浏览器相关api的部分需要判断环境
+    * [Vue改造nuxt项目的详细教程](http://www.speedcode.cn/ArticleDetail?id=89)
+    * [使用Nuxt.js改造已有项目](https://blog.csdn.net/wopelo/article/details/80486874)
+    * [使用Nuxt.js改善现有项目 ](https://zhuanlan.zhihu.com/p/30025987)
+        * 除了页面入口之外，其他的组件都可以在浏览器和服务端复用。需要改造的主要有两处：
+        * 组件内使用到浏览器相关api的部分需要判断环境，比如初始化 iscroll，测量宽度等
+        * 原来组件内直接从 url 上获取 query 参数的地方现在要改为由父级传入
+
+    * 共用header 和登录状态
+    * 共享登录状态方案二:
+        * 传递token,不同域名能获取到token吗?
+    * 共享登录状态方案一: cookies 存放在 .javabus.cn 下 
+        * nuxt 操作cookie 方式不一样 ,没有document对象
+        * article.javabus.cn 和 www.javabus.cn 可以实现共享cookie
+        * 会出现问题:dev 和test 环境也共享cookie了, 不过可后台判断这两种环境 存放在完整cookie路径下
